@@ -1,0 +1,229 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Users/jasonwhalsey/.rvm/gems/ruby-2.3.3/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+
+
+.top-bar-right{
+  width:auto;
+  float:right;
+}
+
+
+
+
+
+
+
+
+/* Confluence WP Styles
+
+/* line 36, ../scss/con_nav.scss */
+.fixed_nav {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+}
+
+/* line 43, ../scss/con_nav.scss */
+.menu-icon {
+  position: absolute;
+  right: 1.0em;
+  top: 1.5em;
+}
+
+/* line 50, ../scss/con_nav.scss */
+.fadeInBlock {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 54, ../scss/con_nav.scss */
+.title-bar {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.9rem;
+}
+
+/* line 59, ../scss/con_nav.scss */
+.top-bar {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.25em 0 1.75em;
+}
+/* line 62, ../scss/con_nav.scss */
+.top-bar ul {
+  background: none;
+  padding-right: 1.0em;
+}
+/* line 65, ../scss/con_nav.scss */
+.top-bar ul > li {
+  position: relative;
+}
+/* line 68, ../scss/con_nav.scss */
+.top-bar ul > li a {
+  color: #fff;
+  font-size: 1.25em;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 1040px) {
+  /* line 78, ../scss/con_nav.scss */
+  .top-bar .top-bar-right {
+    width: 100%;
+  }
+}
+
+/* line 84, ../scss/con_nav.scss */
+.menu-text {
+  color: #fff;
+}
+
+@media only screen and (min-width: 40em) {
+  /* line 97, ../scss/con_nav.scss */
+  .menu:first-child {
+    border-left: none;
+  }
+
+  /* line 102, ../scss/con_nav.scss */
+  .menu li:not(:last-child) {
+    border-right: none;
+  }
+}
+/* line 108, ../scss/con_nav.scss */
+.dropdown.menu .submenu {
+  border: none;
+  width: 120%;
+  z-index: 666;
+  padding: 1.75em 0 0.5em 0.5em;
+}
+/* line 113, ../scss/con_nav.scss */
+.dropdown.menu .submenu li {
+  border-top: 1 px solid #e5e5e5;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 639px) {
+  /* line 113, ../scss/con_nav.scss */
+  .dropdown.menu .submenu li {
+    background-color: #0a0a0a;
+  }
+}
+/* line 119, ../scss/con_nav.scss */
+.dropdown.menu .submenu li:hover {
+  background-color: #0a0a0a;
+}
+@media only screen and (max-width: 1040px) {
+  /* line 108, ../scss/con_nav.scss */
+  .dropdown.menu .submenu {
+    padding: 1.75em 0 0.5em 0.5em;
+  }
+}
+
+/* line 128, ../scss/con_nav.scss */
+.dropdown.menu .submenu.biggap {
+  padding: 3.0em 0 0.5em 0.5em;
+}
+@media only screen and (max-width: 1040px) {
+  /* line 128, ../scss/con_nav.scss */
+  .dropdown.menu .submenu.biggap {
+    padding: 1.65em 0 0.5em 0.5em;
+  }
+}
+@media only screen and (max-width: 639px) {
+  /* line 128, ../scss/con_nav.scss */
+  .dropdown.menu .submenu.biggap {
+    padding: 0.05em 0 0.5em 0.5em;
+  }
+  /* line 135, ../scss/con_nav.scss */
+  .dropdown.menu .submenu.biggap li > a {
+    padding-left: 3.0em;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  /* line 140, ../scss/con_nav.scss */
+  .is-dropdown-submenu {
+    display: block;
+    position: static;
+  }
+}
+
+/* line 146, ../scss/con_nav.scss */
+.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
+  border-color: #fff transparent transparent;
+}
+
+/* line 150, ../scss/con_nav.scss */
+.is-drilldown-submenu-parent > a::after {
+  border-color: transparent transparent transparent #fff;
+}
+
+/* line 154, ../scss/con_nav.scss */
+.js-drilldown-back::before {
+  border-color: transparent #fff transparent transparent;
+}

@@ -310,6 +310,9 @@ $color-text-field: {{ settings.color_text_field }};
 $color-text-field-text: {{ settings.color_text_field_text }};
 $color-navigation-text: {{ settings.color_text }};
 
+
+$blackTrans : rgba(0, 0, 0, 0.5);
+
 // Button colors
 $color-btn-primary: {{ settings.color_button }};
 $color-btn-primary-text: {{ settings.color_button_text }};
@@ -2197,17 +2200,28 @@ $dropdown-padding: 11px 17px;
 .site-header__logo {
   img {
     display: block;
+    width:100%;
+    height:auto;
   }
+}
+
+.site-header__icons{
+  float:right!important;
 }
 
 .site-nav {
   position: relative;
   padding: 0;
-  text-align: center;
+  text-align: right;
   margin: 25px 0;
 
   a {
     padding: 3px 10px;
+    color: #fff;
+    font-size: 1.25em;
+    font-family: "Lato",sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
   }
 
   li {
@@ -2219,10 +2233,32 @@ $dropdown-padding: 11px 17px;
   padding-bottom: $gutter-site-mobile;
 }
 
+.phone_container{
+  font-family: "Lato",sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  text-align: right;
+  font-weight: 600;
+  /*padding-right: 0.75em;*/
+}
+
+.shop_menu{
+  margin-bottom: 2.0em;
+  background-color: rgba(255, 255, 255, 0.5);
+  ul{
+    padding-left:2.0em;
+    li{
+      font-size: 1.5em;
+
+    }
+  }
+}
+
 /*================ Site Nav Links ================*/
 .site-nav__link {
   display: block;
   white-space: nowrap;
+  color:#fff!important;
 
   .site-nav--centered & {
     padding-top: 0;
@@ -2262,10 +2298,10 @@ $dropdown-padding: 11px 17px;
   margin: 0;
   z-index: $z-index-dropdown;
   text-align: left;
-  border: 1px solid $color-border;
-  background: $color-bg;
+  border: none;
+  background: $blackTrans;
   left: -1px;
-  top: 41px;
+  top: 54px;
 
   .site-nav__link {
     padding: 4px 30px 4px 0;
@@ -3522,9 +3558,10 @@ h1.product-single__title {
 
 /*================ MODULES ================*/
 .site-header {
-  background-color: $color-body;
-  position: relative;
-  padding: 0 $gutter-site;
+  background-color: $blackTrans;
+  position: fixed;
+  z-index:6666;
+  padding: 0;
 
   @include media-query($small) {
     border-bottom: 1px solid $color-border;
@@ -3591,7 +3628,7 @@ h1.product-single__title {
 
 .site-header__icons-wrapper {
   position: relative;
-  margin-right: -10px;
+  margin-right: 20px;
 }
 
 .site-header__cart,
