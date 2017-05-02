@@ -1179,7 +1179,8 @@ html {
 
 .main-content {
   display: block;
-  padding-top: $section-spacing-small;
+  // padding-top: $section-spacing-small;
+  padding-bottom:4.0em;
 
   @include media-query($medium-up) {
     padding-top: $section-spacing;
@@ -2213,12 +2214,12 @@ $dropdown-padding: 11px 17px;
   position: relative;
   padding: 0;
   text-align: right;
-  margin: 25px 0;
+  margin: 0px 0 25px;
 
   a {
     padding: 3px 10px;
     color: #fff;
-    font-size: 1.25em;
+    font-size: 22.5px;
     font-family: "Lato",sans-serif;
     font-weight: 600;
     text-transform: capitalize;
@@ -2227,6 +2228,10 @@ $dropdown-padding: 11px 17px;
   li {
     display: inline-block;
   }
+}
+
+.mob_nav{
+  text-align: right;
 }
 
 .site-nav--centered {
@@ -2239,7 +2244,8 @@ $dropdown-padding: 11px 17px;
   font-size: 2.5em;
   text-align: right;
   font-weight: 600;
-  /*padding-right: 0.75em;*/
+  padding-right: 28px;
+  padding-top:20px;
 }
 
 .shop_menu{
@@ -2249,6 +2255,8 @@ $dropdown-padding: 11px 17px;
     padding-left:2.0em;
     li{
       font-size: 1.5em;
+      float:left;
+      margin-right:1.75em;
 
     }
   }
@@ -2300,8 +2308,8 @@ $dropdown-padding: 11px 17px;
   text-align: left;
   border: none;
   background: $blackTrans;
-  left: -1px;
-  top: 54px;
+  left: -33px;
+  top: 40px;
 
   .site-nav__link {
     padding: 4px 30px 4px 0;
@@ -3154,7 +3162,7 @@ h1.product-single__title {
 
 @include media-query($small) {
   .template-product .main-content {
-    padding-top: $grid-gutter-mobile;
+    // padding-top: $grid-gutter-mobile;
   }
 
   .thumbnails-slider--active {
@@ -3576,7 +3584,7 @@ h1.product-single__title {
 }
 
 .site-header__logo {
-  margin: 15px 0;
+  margin: 15px 0 15px 8px;
 
   .logo-align--center & {
     text-align: center;
@@ -4222,6 +4230,7 @@ $mobile-nav-button-padding: 15px;
   display: none;
   overflow: hidden;
   width: 100%;
+  z-index:6666;
 
   &::after {
     content: '';
@@ -4247,6 +4256,11 @@ $mobile-nav-button-padding: 15px;
   .icon-hamburger {
     display: none;
   }
+}
+
+.store-nav-wrapper {
+  @include transform(translate3d(0, -100%, 0));
+  top:30px;
 }
 
 /*================ Modals ================*/

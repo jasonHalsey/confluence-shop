@@ -1,15 +1,16 @@
 jQuery(document).ready(function() {
-	pageContentOffset()
+	pageContentOffset();
 });
 
 
 jQuery(window).resize(function(){
-    pageContentOffset()
+    pageContentOffset();
 });
 
 
 // River Report Hero Sizing
 function pageContentOffset() {
   var heroheight = jQuery("header.site-header").height();
-  jQuery('main.main-content').css('margin-top',heroheight );
+  jQuery('div.collection_header_img').css('height',heroheight );
+  console.log(heroheight);
 }

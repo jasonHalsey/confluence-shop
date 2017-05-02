@@ -57,8 +57,11 @@
         </li>
       {% endfor %}
     </ul>
+
   </nav>
 
+
+  
   {% if section.settings.message %}
     <div class="notification-bar">
       {% if section.settings.message %}
@@ -118,35 +121,36 @@
       </div>
 
       {% if section.settings.align_logo == 'left' %}
-        <nav class="grid__item medium-up--three-quarters small--hide" id="AccessibleNav" role="navigation">
-          <div class="phone_container">541-678-5633</div>
-          {% include 'site-nav' %}
+        <nav class="grid__item" id="AccessibleNav" role="navigation">
+          {% include 'main_nav' %}
         </nav>
       {% endif %}
+      
       <div class="mob_nav">
         {% unless linklists[section.settings.main_linklist] == blank %}
             <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
               {% include 'icon-hamburger' %}
               {% include 'icon-close' %}
-              <span class="icon__fallback-text">{{ 'layout.navigation.toggle' | t }}</span>
+             
             </button>
           {% endunless %}
       </div>
     </div>
 
     <div class="grid grid--no-gutters grid--table shop_menu">
-      <div class="grid__item small--one-half medium-up--one-half text-right">
-        <section id="store_nav">
-          <ul>
-          {% for link in linklists.store-nav.links %}
-             <li>{{ link.title | link_to: link.url }}</li>
-          {% endfor %}
-          </ul>
+      <div class="grid__item small--one-half medium-up--three-quarters small--hide text-right">
+        <section id="store_nav" class="clearfix">
+          {% if section.settings.align_logo == 'left' %}
+        <nav class="grid__item medium-up--three-quarters small--hide" id="AccessibleNav" role="navigation">
+
+          {% include 'site-nav' %}
+        </nav>
+      {% endif %}
 
         </section>
       </div>
 
-      <div class="grid__item small--one-half medium-up--one-half text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
+      <div class="grid__item small--one-half medium-up--one-quarter text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
        
        <div class="site-header__icons-wrapper">
           {% if section.settings.align_logo == 'left' %}
