@@ -2732,8 +2732,6 @@ theme.init = function() {
 $(theme.init);
 
 
-
-// See original by emre here https://codepen.io/emredenx/pen/ojcxl
 $(document).ready(function ($) {
     $.fn.menumaker = function (options) {
         var flexmenu = $(this), settings = $.extend({

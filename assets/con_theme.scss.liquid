@@ -1,3 +1,4 @@
+/* Confluence Styles */
 @charset "UTF-8";
 
 //Responsive Sizing
@@ -250,7 +251,6 @@ div.collection_header_img{
 .mob_nav{
   position: absolute;
     left: 0;
-    top: 48%
 }
 @media only screen and (max-width: 40.063em){
   .btn--link {
@@ -295,7 +295,6 @@ div.collection_header_img{
 }
 .top-bar ul {
     background: none;
-    padding-right: 1.0em;
 }
 @media screen and (min-width: 40em){
   .menu.medium-horizontal>li {
@@ -305,9 +304,7 @@ div.collection_header_img{
 .top-bar ul>li {
     position: relative;
 }
-.top-bar ul>li>ul {
-  display:none;
-}
+
 .menu>li {
     vertical-align: middle;
     float:left;
@@ -357,15 +354,6 @@ div.collection_header_img{
     -webkit-transition:all ease-in-out .3s;
     transition: all ease-in-out .3s;
 }
-
-// #flexmenu ul li a {
-//     padding: 17px;
-//     font-size: 12px;
-//     letter-spacing: 1px;
-//     text-decoration: none;
-//     color: #ddd;
-//     font-weight: 700;
-// }
 
 #flexmenu ul li.has-sub > a {
     padding-right: 30px;
@@ -429,16 +417,18 @@ div.collection_header_img{
 /* Submenu default states, removed by hover gives the animation */
 #flexmenu ul ul {
     position: absolute;
-    left: -9999px;
+    left: -9998px;
+    z-index:8888;
+    background: rgba(0,0,0,0.5);
 }
 #flexmenu li:hover > ul {
     left: auto;
 }
 #flexmenu ul ul li {
     height: 0;
-    background: #F14F80;
     -webkit-transition:all .25s ease;
     transition: all .25s ease
+    margin-bottom:1.0em;
 }
 #flexmenu li:hover > ul > li {
     height: 35px;
@@ -450,18 +440,19 @@ div.collection_header_img{
 }
 #flexmenu ul ul li a {
     padding: 11px 15px;
-    width: 170px;
-    font-size: 12px;
     text-decoration: none;
     color: #FFF;
     font-weight: 400;
 }
 @media screen and (max-width: 768px) {
-  /* Center the logo and remove the bar */
+  .site-header{
+    position: relative;
+    background-color: #7f7f7f;
+  }
   
   /* Hamburger */
     .mobile_button {
-        background: #751CEC;
+        background: #7f7f7f;
         width: 60px;
         height: 48px;
         position: absolute;
@@ -470,32 +461,9 @@ div.collection_header_img{
         cursor: pointer;
         z-index: 10000;
     }
-    .mobile_button:after {
-        position: absolute;
-        top: 22px;
-        right: 20px;
-        display: block;
-        height: 4px;
-        width: 20px;
-        border-top: 2px solid #dddddd;
-        border-bottom: 2px solid #dddddd;
-        content: '';
-    }
-    .mobile_button:before {
-        -webkit-transition:all .3s ease;
-        transition: all .3s ease;
-        position: absolute;
-        top: 16px;
-        right: 20px;
-        display: block;
-        height: 2px;
-        width: 20px;
-        background: #ddd;
-        content: '';
-    }
   /* Turn it into an X when open */
     .mobile_button.menu-opened{
-      background: #2e1f62;
+      background: transparent;
     }
     .mobile_button.menu-opened:after {
         -webkit-transition:all .3s ease;
@@ -568,7 +536,7 @@ div.collection_header_img{
         right: 0;
         top: 0;
         display: block;
-        border-left: 1px solid #444;
+        // border-left: 1px solid #444;
         height: 46px;
         width: 46px;
         cursor: pointer;
