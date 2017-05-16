@@ -2219,10 +2219,10 @@ $dropdown-padding: 11px 17px;
   a {
     padding: 3px 10px;
     color: #fff;
-    font-size: 22.5px;
+    font-size: 20.5px;
     font-family: "Lato",sans-serif;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: uppercase;
   }
 
   li {
@@ -2258,7 +2258,9 @@ $dropdown-padding: 11px 17px;
       font-size: 1.5em;
       float:left;
       margin-right:1.75em;
-
+    }
+    ul{
+      padding-left:0.5em;
     }
   }
 }
@@ -2268,6 +2270,7 @@ $dropdown-padding: 11px 17px;
   display: block;
   white-space: nowrap;
   color:#fff!important;
+  text-transform: uppercase;
 
   .site-nav--centered & {
     padding-top: 0;
@@ -3627,6 +3630,9 @@ h1.product-single__title {
     .site-header__cart {
       font-size: em($font-size-base);
     }
+  }
+  .site-header__icons{
+    float:right!important;
   }
 }
 
